@@ -1,0 +1,197 @@
+/* Main page layout */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Container styling */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Heading styling */
+h1 {
+    font-family: 'Didot', 'Bodoni MT', 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+/* Eye element styles */
+.eye {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #1a1a1a;
+    border-radius: 50%;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0 2px;
+    transition: all 0.3s ease;
+}
+
+/* Closed eye state */
+.eye.closed {
+    border-radius: 0;
+    height: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #1a1a1a;
+    transform: translateY(15px);
+}
+
+/* Hide pupil when closed */
+.eye.closed .pupil {
+    opacity: 0;
+}
+
+/* Pupil element styles */
+.pupil {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #1a1a1a;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Subtitle text styles */
+p.subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Form layout styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input group positioning */
+.input-group {
+    text-align: left;
+    position: relative;
+}
+
+/* Label text styles */
+label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Input field styles */
+input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    font-size: 1rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    transition: border-color 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Input focus styles */
+input:focus {
+    border-bottom-color: #000000;
+}
+
+/* Submit button styles */
+button {
+    margin-top: 30px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Message container styles */
+.message {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    padding: 10px;
+}
+
+/* Error message box */
+.error {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
+/* Success message box */
+.success {
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Inline error styles */
+.error-text {
+    font-size: 0.75rem;
+    color: #ff0000;
+    margin-top: 4px;
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Help text styles */
+.help-text {
+    font-size: 0.7rem;
+    color: #666;
+    margin-top: 2px;
+    display: block;
+}
