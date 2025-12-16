@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <form method="POST" autocomplete="off">
         <div class="input-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name" value="<?= htmlspecialchars($name ?? '') ?>">
             <?php if (isset($errors['name'])): ?>
                 <span class="error-text"><?= $errors['name'] ?></span>
             <?php endif; ?>
@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <div class="input-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" value="<?= htmlspecialchars($email ?? '') ?>">
             <?php if (isset($errors['email'])): ?>
                 <span class="error-text"><?= $errors['email'] ?></span>
             <?php endif; ?>
